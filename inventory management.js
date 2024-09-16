@@ -14,11 +14,27 @@ const inventory = [
 function displayProductDetails (inventory) {
     inventory.forEach(item =>  {
     if (item.quantity > item.lowstocklevel) {
-       return  console.log(`${item.name} : In Stock`)
+     console.log(`${item.name} : In Stock`)
     } else {
-      return  console.log(`${item.name} : Low Stock`)
+      console.log(`${item.name} : Low Stock`)
    }}   
    )}
 displayProductDetails(inventory)
 
+//Task 3
+
+ let unitsSold = 6
+
+function updateStock  (inventory,unitsSold){
+   let headStock = inventory[3];
+    let newstock =  headStock.quantity - unitsSold;
+
+    if (newstock === 0)
+      console.log("Headphones after sales: Out of Stock")
+    else if (newstock < headStock.lowstocklevel)
+        console.log("Headphones after sales: Low Stock")
+    else 
+    console.log("")
+     }
+   updateStock(inventory,unitsSold)
 
