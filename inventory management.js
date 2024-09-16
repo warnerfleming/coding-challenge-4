@@ -45,7 +45,17 @@ function checkLowStock (inventory) {
         console.log(`${item.name} stock is low`)
 
 
-  }  )
+}  )
 }
 
 checkLowStock(inventory)
+
+//Task 5 
+
+function calculateInventoryValue (inventory) {
+    return inventory.reduce((totalValue, item) =>  {
+    return totalValue + (item.quantity * item.price)}, 0)
+};
+
+console.log(calculateInventoryValue(inventory))
+
