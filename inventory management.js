@@ -14,9 +14,9 @@ const inventory = [
 function displayProductDetails (inventory) {
     inventory.forEach(item =>  {
     if (item.quantity > item.lowstocklevel) {
-     console.log(`${item.name} : In Stock`)
+     console.log(`${item.name}, Price: $${item.price}, Quantity: ${item.quantity}, In Stock`)
     } else {
-      console.log(`${item.name} : Low Stock`)
+      console.log(`${item.name}, Price: $${item.price}, Quantity: ${item.quantity}, Low Stock`)
    }}   
    )}
 displayProductDetails(inventory)
@@ -38,3 +38,14 @@ function updateStock  (inventory,unitsSold){
      }
    updateStock(inventory,unitsSold)
 
+//Task 4
+function checkLowStock (inventory) {
+    inventory.forEach(item => {
+    if (item.quantity <= item.lowstocklevel)
+        console.log(`${item.name} stock is low`)
+
+
+  }  )
+}
+
+checkLowStock(inventory)
