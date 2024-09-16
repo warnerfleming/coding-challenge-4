@@ -59,3 +59,14 @@ function calculateInventoryValue (inventory) {
 
 console.log(calculateInventoryValue(inventory))
 
+//Task 6
+  function processSale (inventory, unitsold) {
+     let result = inventory.find(({name}) => name === item)
+     if (inventory.includes(item)){
+        return `Product not in Inventory`
+     } else {
+        return updateStock(result,unitSold);
+     } 
+  }
+
+  console.log(processSale("Battery", 1)) 
